@@ -7,6 +7,7 @@ const mode = 'development';
 
 module.exports = merge(baseConfig(mode), {
   mode,
+  devtool: 'source-map',
   devServer: {
     contentBase: join(process.cwd(), 'build'),
   },
