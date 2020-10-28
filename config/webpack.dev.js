@@ -10,5 +10,7 @@ module.exports = merge(baseConfig(mode), {
   devtool: 'source-map',
   devServer: {
     contentBase: join(process.cwd(), 'build'),
+    hot: true,
+    open: true,
   },
 });
