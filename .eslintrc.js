@@ -11,5 +11,8 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'global-require': 0,
+    'linebreak-style': ['off', 'windows'],
+    'import/no-dynamic-require': 0,
   },
 };
