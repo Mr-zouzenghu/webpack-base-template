@@ -1,1 +1,0 @@
-(()=>{var e={829:(e,r,t)=>{e.exports=t.p+"./img/index.jpg"}},r={};function t(n){if(r[n])return r[n].exports;var p=r[n]={exports:{}};return e[n](p,p.exports,t),p.exports}t.p="./",(()=>{"use strict";var e;document.body.appendChild(("Hello Webpack",(e=document.createElement("h1")).innerHTML="Hello Webpack",e));var r=t(829),n=new Image;n.src=r,document.body.appendChild(n)})()})();
