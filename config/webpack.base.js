@@ -38,6 +38,7 @@ module.exports = (env) => {
     ],
     module: {
       rules: [
+        // css build
         {
           test: /\.(sc|sa|c)ss$/,
           use: [
@@ -46,6 +47,36 @@ module.exports = (env) => {
             'postcss-loader',
             'sass-loader',
           ],
+        },
+        // image build
+        {
+          test: /\.(jpg|png|jpeg|gif)$/,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: 8 * 1024,
+                esModule: false,
+                name: './img/[name].[ext]',
+              },
+            },
+          ],
+        },
+        // font build
+        {
+          test: /\.(eot|woff2?|ttf|svg)$/,
+          loader: 'file-loader',
+          options: {
+            name: '[name]-[hash:5].min.[ext]',
+            limit: 8 * 1024,
+            publicPath: 'fonts/',
+            outputPath: 'fonts/',
+          },
+        },
+        // html image build
+        {
+          test: /\.html$/,
+          loader: 'html-loader',
         },
       ],
     },
